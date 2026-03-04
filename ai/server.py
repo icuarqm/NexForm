@@ -9,7 +9,7 @@ CORS(app)
 generator = FormGenerator()
 
 
-@app.route("/health", methods=["GET"])
+@app.route("/health", methods=["GET", "POST"])
 def health():
     return jsonify({"status": "ok", "service": "NexForm AI"})
 

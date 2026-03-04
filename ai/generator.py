@@ -41,7 +41,7 @@ Only include "options" for select, checkbox, and radio types."""
     def _get_model(self) -> str:
         """Return default model name based on provider"""
         if self.provider == "gemini":
-            return "gemini-2.0-flash"
+            return "gemini-2.5-flash"
         return "gpt-4o-mini"
 
     def _clean_json(self, text: str) -> str:
