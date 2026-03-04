@@ -16,6 +16,7 @@ services:
       - MYSQL_HOST=${MYSQL_HOST}
       - MYSQL_DATABASE=${MYSQL_DATABASE}
       - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
+      - MYSQL_USER=${MYSQL_USER}
       - AI_SERVICE_URL=http://ai:5000
     restart: unless-stopped
 
@@ -35,6 +36,7 @@ services:
       - MYSQL_HOST=${MYSQL_HOST}
       - MYSQL_DATABASE=${MYSQL_DATABASE}
       - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
+      - MYSQL_USER=${MYSQL_USER}
     restart: unless-stopped
 
   db:
