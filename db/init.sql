@@ -1,13 +1,25 @@
 CREATE DATABASE IF NOT EXISTS nexform;
 USE nexform;
 
+CREATE TABLE users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(50) NOT NULL UNIQUE,
+    email VARCHAR(255) NOT NULL UNIQUE,
+    password_hash VARCHAR(255) NOT NULL,
+    is_admin BOOLEAN DEFAULT FALSE,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
 CREATE TABLE forms (
     id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT NOT NULL,
     title VARCHAR(255) NOT NULL,
     description TEXT,
     schema_json JSON NOT NULL,
     prompt_used TEXT,
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    share_token VARCHAR(32) UNIQUE,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
 );
 
 CREATE TABLE form_fields (

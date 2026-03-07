@@ -80,5 +80,16 @@ class AIService {
      */
     public function generate(string $prompt): ?array {
         return $this->request("/generate", ["prompt" => $prompt]);
-    }   
+    }
+
+    /**
+     * Send a question about form responses to AI for analysis
+     * 
+     * @param int    $formId   - ID of the form to analyze
+     * @param string $question - User's question about responses
+     * @return ?array          - Analysis result with answer and tools_used
+     */
+    public function analyze(int $formId, string $question): ?array {
+        return $this->request("/analyze", ["form_id" => $formId, "question" => $question]);
+    }
 }

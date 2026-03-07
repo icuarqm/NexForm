@@ -18,6 +18,7 @@ services:
       - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
       - MYSQL_USER=${MYSQL_USER}
       - AI_SERVICE_URL=http://ai:5000
+      - ADMIN_SECRET_KEY=${ADMIN_SECRET_KEY}
     restart: unless-stopped
 
   ai:
