@@ -22,15 +22,15 @@ This project combines a traditional backend stack (**PHP + MySQL**) with an AI s
 
 ## Screenshots
 
-> Placeholder — landing page screenshot
+> Landing Page
 
 ![Landing Page](./screenshots/landing.png)
 
-> Placeholder — form generation screenshot
+> Form Generation
 
 ![Form Generation](./screenshots/create.png)
 
-> Placeholder — response analysis screenshot
+> Response Analysis
 
 ![Response Analysis](./screenshots/analyze.png)
 
