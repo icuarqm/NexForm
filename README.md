@@ -78,7 +78,7 @@ Create a `.env` file from `.env.example` using the setup script:
 python scripts/setup_env.py
 ```
 
-After running the script, open the `.env` file and fill in the required values.
+The setup script will generate and configure the .env file automatically.
 
 Example configuration:
 
