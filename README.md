@@ -132,10 +132,16 @@ If required, also make sure virtualization is enabled.
 
 ## Running with Docker
 
-Start all services:
+For the first run, build and start all services:
 
 ```bash
-docker compose up --build
+docker compose up --build -d
+```
+
+For later runs, you can start the services without rebuilding:
+
+```bash
+docker compose up -d
 ```
 
 This will start:
