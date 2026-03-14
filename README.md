@@ -185,34 +185,6 @@ If you changed `PHPMYADMIN_PORT` in your `.env` file, use that port instead.
 
 ---
 
-## Environment Variables
-
-The project uses a `.env` file for configuration.
-
-Main variables include:
-
-```env
-GEMINI_API_KEY=your_gemini_api_key_here
-OPENAI_API_KEY=your_openai_api_key_here
-AI_PROVIDER=gemini
-
-MYSQL_USER=root
-MYSQL_ROOT_PASSWORD=root
-MYSQL_DATABASE=nexform
-MYSQL_HOST=db
-MYSQL_PORT=3306
-
-PHP_PORT=80
-PHPMYADMIN_PORT=8080
-AI_SERVICE_PORT=5000
-
-AI_SERVICE_URL=http://ai:5000
-
-ADMIN_SECRET_KEY=your_admin_secret_key_here
-```
-
----
-
 ## Future Improvements
 
 Planned improvements:
